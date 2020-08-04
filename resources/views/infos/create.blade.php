@@ -100,37 +100,40 @@
               <h5>Derniers reglages</h5>
                 <div class="signin-form">
                   <div class="form-group">
-                    <label for="info_type">Destinée aux étudiants de (du)</label>
-                    <select id="info_type" name="info_type" class="custom-select">
-                    <option value="UNIV">tout l'université</option>
-                      <option value="CIC">Centre Informatique et de Calcul (CIC)</option>
-                      <option value="CFC">Centre de Formation Continue (CFC)</option>
-                      <option value="CERSA">Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)</option>
-                      <option value="CR">Centres de recherche</option>
-                      <option value="CW">Centre WASCAL</option>
-                      <option value="EAM">Ecole des Assistants Médicaux (EAM)</option>
-                      <option value="ENSI">Ecole Nationale Supérieure d'Ingénieurs (ENSI)</option>
-                      <option value="Privé">Ecole Supérieure de Secrétariat de Direction (ESSD)</option>
-                      <option value="ESSD">Ecole Supérieure des Techniques Biologiques et Alimentaires (E.S.T.B.A)</option>
-                      <option value="ESA">Ecole Supérieure d’Agronomie (ESA)</option>
-                      <option value="FDD">Faculté de Droit (FDD)</option>
-                      <option value="FLLA">Faculté des Lettres, Langues et Arts (FLLA)</option>
-                      <option value="FASEG">Faculté des Sciences de l'Homme et de la Société (FSHS) des Sciences Economiques et de Gestion (FASEG)</option>
-                      <option value="FSS">Faculté des Sciences de la Santé (FSS)</option>
-                      <option value="FDS">Faculté des Sciences (FDS)</option>
-                      <option value="IC">Institut Confucius</option>
-                      <option value="INSE">Institut National des Sciences de l'Education (INSE)</option>
-                      <option value="IUT">Institut Universitaire de Technologie de Gestion (IUT de Gestion)</option>
-                      <option value="ISICA">Institut des Sciences de l’Information, de la Communication et des Arts (ISICA)</option>
+                    <label for="university">Destinée aux étudiants de (du)</label>
+                    <select id="university" name="receiver_wording" class="custom-select">
+                      <option value=null >University</option>
+                      <option value="Centre Informatique et de Calcul (CIC)">Centre Informatique et de Calcul (CIC)</option>
+                      <option value="Centre de Formation Continue (CFC)">Centre de Formation Continue (CFC)</option>
+                      <option value="Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)">Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)</option>
+                      <option value="Centres de recherche">Centres de recherche</option>
+                      <option value="Centre WASCAL">Centre WASCAL</option>
+                      <option value="Ecole des Assistants Médicaux (EAM)">Ecole des Assistants Médicaux (EAM)</option>
+                      <option value="Ecole Nationale Supérieure d'Ingénieurs (ENSI)">Ecole Nationale Supérieure d'Ingénieurs (ENSI)</option>
+                      <option value="Ecole Supérieure de Secrétariat de Direction (ESSD)">Ecole Supérieure de Secrétariat de Direction (ESSD)</option>
+                      <option value="Ecole Supérieure des Techniques Biologiques et Alimentaires (E.S.T.B.A)">Ecole Supérieure des Techniques Biologiques et Alimentaires (E.S.T.B.A)</option>
+                      <option value="Ecole Supérieure d’Agronomie (ESA)">Ecole Supérieure d’Agronomie (ESA)</option>
+                      <option value="Faculté de Droit (FDD)">Faculté de Droit (FDD)</option>
+                      <option value="Faculté des Lettres, Langues et Arts (FLLA)">Faculté des Lettres, Langues et Arts (FLLA)</option>
+                      <option value="Faculté des Sciences de l'Homme et de la Société (FSHS) des Sciences Economiques et de Gestion (FASEG)">Faculté des Sciences de l'Homme et de la Société (FSHS) des Sciences Economiques et de Gestion (FASEG)</option>
+                      <option value="Faculté des Sciences de la Santé (FSS)">Faculté des Sciences de la Santé (FSS)</option>
+                      <option value="Faculté des Sciences (FDS)">Faculté des Sciences (FDS)</option>
+                      <option value="Institut Confucius">Institut Confucius</option>
+                      <option value="Institut National des Sciences de l'Education (INSE)">Institut National des Sciences de l'Education (INSE)</option>
+                      <option value="Institut Universitaire de Technologie de Gestion (IUT de Gestion)">Institut Universitaire de Technologie de Gestion (IUT de Gestion)</option>
+                      <option value="Institut des Sciences de l’Information, de la Communication et des Arts (ISICA)">Institut des Sciences de l’Information, de la Communication et des Arts (ISICA)</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="email">Titre</label>
-                    <input id="title" type="text" class="form-control " name="info_title" value="" required=""  autofocus="" placeholder="Titre de l'information">
+                    <label for="title">Titre</label>
+                    <input id="title" type="text" class="form-control " name="title" value="" required=""  autofocus="" placeholder="Titre de l'information">
                   </div>
                   <div class="form-group">
-                    <label for="email">Mots clés</label>
+                    <label for="tags">Mots clés</label>
                     <input id="tags" type="text" class="form-control " name="tags" value="" required=""  autofocus="" placeholder="saisissez des mots clés">
+                  </div>
+                  <div class="form-group">
+                    <input name="cover" type="file"/><br>
                   </div>
                 </div>
               </div>

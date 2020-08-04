@@ -140,47 +140,15 @@
         <div class="pd-20 content-body">
           <div class="card-explode">
             <div class="card card-hover card-blog-one">
-                <div class="card-img-wrapper"><img style="height:300px;" src="{{ asset('img/img26.jpg') }}" class="card-img" alt=""></div>
+                <div class="card-img-wrapper"><img style="height:300px;" src="{{asset(getInfoPicture($info))}}" class="card-img" alt=""></div>
                 <div class="card-body">
-                    <div class="marker marker-ribbon marker-success marker-top-right pos-absolute t-10 r-0">Important</div> 
-                  <h5 class="card-title">10 Technologies That Are About to Change the World</h5>
+                    <div class="marker marker-ribbon marker-success marker-top-right pos-absolute t-10 r-0">{{getInfoType($info)}}</div> 
+                  <h5 class="card-title">{{$info->title}}</h5>
                   <p class="card-desc">
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only 
-                        five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the 
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker 
-                        including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only 
-                        five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the 
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker 
-                        including versions of Lorem Ipsum.
-                    </p>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only 
-                        five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the 
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker 
-                        including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only 
-                        five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the 
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker 
-                        including versions of Lorem Ipsum.
-                    </p>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only 
-                        five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the 
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker 
-                        including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only 
-                        five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the 
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker 
-                        including versions of Lorem Ipsum.
-                    </p>
+                    @php echo $info->info_content; @endphp
                   </p>
                   <div style="padding-left:0px; padding-right: 0px; " class="card-footer">
-                    <span>Présidence de l'Université</span>
+                    <span class="text-primary" style="font-weight: bold;">{{getReceiverWording($info)}}</span>
                     <span class="tx-gray-500 mg-l-auto">
                     <nav class="nav nav-card-icon">
                     <a  href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-printer"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg></a>
