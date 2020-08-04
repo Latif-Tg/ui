@@ -40,11 +40,11 @@
             <li class="nav-item show">
                 <li class="nav-item"><a href="/infos" class="nav-link"><i data-feather="layers"></i> Publications</a></li>
                 <li class="nav-item"><a href="/calendar" class="nav-link"><i data-feather="calendar"></i> Calendrier</a></li>
-                <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="wind"></i> Restaurant <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
                 <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="map-pin"></i> Carte interactive <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
                 <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="users"></i> Associations <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
                 <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="award"></i> Distinctions <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
                 <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="briefcase"></i> Emplois & Stages <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
+                <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="gift"></i> Partenaires & services <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
               </nav>
             </li>
           </ul>
@@ -144,7 +144,7 @@
               </div>
               <div style="float:right;" class="col-lg-8">
                 <h5>Information</h5><br>
-                <textarea style="height:80vh;" id="myEditor" name="info_content" cols="40" rows="10">
+                <textarea style="height:calc(100vh - 160px);" id="myEditor" name="info_content" cols="40" rows="10">
                   Bienvenue !
                 </textarea>
                 <div style="float:right;" class="form-group d-flex mg-t-15 mg-b-0">
