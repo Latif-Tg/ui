@@ -10,3 +10,25 @@ if(!function_exists('getInfoPicture')) {
         }
     }
 }
+
+if(!function_exists('getInfoType')) {
+    function getInfoType($info) {
+        if($info->receiver_wording == "null") {
+            return "PUBLIC";
+        }
+        else {
+            return "PRIVATE";
+        }
+    }
+}
+
+if(!function_exists('getReceiverWording')) {
+    function getReceiverWording($info) {
+        if($info->receiver_wording == "null") {
+            return "ALL";
+        }
+        else {
+            return $info->receiver_wording;
+        }
+    }
+}
