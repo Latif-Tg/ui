@@ -33,7 +33,7 @@ class InfosController extends Controller
     
     public function index()
     { 
-      $infos = Info::paginate(2);
+      $infos = Info::paginate(3);
       return view('infos.index',compact('infos'));
     }
 
