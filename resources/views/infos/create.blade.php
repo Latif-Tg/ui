@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{{ asset('css/vendor/fortawesome/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/vendor/ionicons/css/ionicons.min.css') }}">
 
+
+
     <!-- template css -->
     <link rel="stylesheet" href="{{ asset('css/all.css') }}">
 
@@ -38,11 +40,11 @@
             <li class="nav-item show">
                 <li class="nav-item"><a href="/infos" class="nav-link"><i data-feather="layers"></i> Publications</a></li>
                 <li class="nav-item"><a href="/calendar" class="nav-link"><i data-feather="calendar"></i> Calendrier</a></li>
-                <li class="nav-item"><a href="/restaurant" class="nav-link"><i data-feather="wind"></i> Restaurant</a></li>
-                <li class="nav-item"><a href="/map" class="nav-link"><i data-feather="map-pin"></i> Carte interactive</a></li>
-                <li class="nav-item"><a href="/associations" class="nav-link"><i data-feather="users"></i> Associations</a></li>
-                <li class="nav-item"><a href="/distinction" class="nav-link"><i data-feather="award"></i> Distinctions</a></li>
-                <li class="nav-item"><a href="/jobs" class="nav-link"><i data-feather="briefcase"></i> Emplois & Stages</a></li>
+                <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="wind"></i> Restaurant <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
+                <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="map-pin"></i> Carte interactive <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
+                <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="users"></i> Associations <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
+                <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="award"></i> Distinctions <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
+                <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="briefcase"></i> Emplois & Stages <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
               </nav>
             </li>
           </ul>
@@ -59,57 +61,10 @@
         <div class="header">
           <div class="header-left">
             <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
-  
-            <div class="header-search">
-              <i data-feather="search"></i>
-              <input type="search" class="form-control" placeholder="Que recherchez-vous ?">
-            </div><!-- header-search -->
           </div><!-- header-left -->
   
           <div class="header-right">
             <a href="#" class="header-help-link"><i data-feather="help-circle"></i></a>
-            <div class="dropdown dropdown-notification">
-              <a href="#" class="dropdown-link new" data-toggle="dropdown"><i data-feather="bell"></i></a>
-              <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-menu-header">
-                  <h6>Notifications</h6>
-                  <a href="#"><i data-feather="more-vertical"></i></a>
-                </div><!-- dropdown-menu-header -->
-                <div class="dropdown-menu-body">
-                  <a href="#" class="dropdown-item">
-                    <div class="avatar"><span class="avatar-initial rounded-circle text-primary bg-primary-light">s</span></div>
-                    <div class="dropdown-item-body">
-                      <p><strong>Socrates Itumay</strong> marked the task as completed.</p>
-                      <span>5 hours ago</span>
-                    </div>
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    <div class="avatar"><span class="avatar-initial rounded-circle tx-pink bg-pink-light">r</span></div>
-                    <div class="dropdown-item-body">
-                      <p><strong>Reynante Labares</strong> marked the task as incomplete.</p>
-                      <span>8 hours ago</span>
-                    </div>
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    <div class="avatar"><span class="avatar-initial rounded-circle tx-success bg-success-light">d</span></div>
-                    <div class="dropdown-item-body">
-                      <p><strong>Dyanne Aceron</strong> responded to your comment on this <strong>post</strong>.</p>
-                      <span>a day ago</span>
-                    </div>
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    <div class="avatar"><span class="avatar-initial rounded-circle tx-indigo bg-indigo-light">k</span></div>
-                    <div class="dropdown-item-body">
-                      <p><strong>Kirby Avendula</strong> marked the task as incomplete.</p>
-                      <span>2 days ago</span>
-                    </div>
-                  </a>
-                </div><!-- dropdown-menu-body -->
-                <div class="dropdown-menu-footer">
-                  <a href="#">View All Notifications</a>
-                </div>
-              </div><!-- dropdown-menu -->
-            </div>
             <div class="dropdown dropdown-loggeduser">
               <a href="#" class="dropdown-link" data-toggle="dropdown">
                 <div class="avatar avatar-sm">
@@ -143,30 +98,58 @@
             <!--@modif-->
             <form action="{{route('infos.store')}}" method="post" enctype="multipart/form-data">
               @csrf
-              <label>Info title</label>
-              <input name="title" type="text"/><br>
-
-              
-              <label>Info keyword</label>
-              <input name="tags" type="text"/><br>
-
-              
-              <label>Faculty or School destination</label>
-              <select id="university" name="receiver_wording">
-                  <option value="UCAO">UCAO</option>
-                  <option value="ESGIS">ESGIS</option>
-                  <option value="FORMATEC">FORMATEC</option>
-                  <option value="IAI">IAI</option>
-              </select><br/>
-
-              <input name="cover" type="file"/><br>
-
-              <label>Edit your information content</label><br>
-              <textarea id="myEditor" name="info_content" cols="40" rows="10">
-                Bienvenue !
-              </textarea>
-              <div style="float:right;" class="form-group d-flex mg-t-15 mg-b-0">
-                <button type="submit" class="btn btn-brand-01 btn-uppercase flex-fill"><i data-feather="save"></i> ENREGISTRER</button>
+              <div style="float:left;" class="col-lg-4">
+              <h5>Derniers reglages</h5>
+                <div class="signin-form">
+                  <div class="form-group">
+                    <label for="info_type">Nature de l'information</label>
+                    <select id="info_type" name="info_type" class="custom-select">
+                      <option value="Public">Public</option>
+                      <option value="Privé">Privé</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="info_type">Destinée aux étudiants de (du)</label>
+                    <select id="info_type" name="info_type" class="custom-select">
+                      <option value="Public">Centre Informatique et de Calcul (CIC)</option>
+                      <option value="Privé">Centre de Formation Continue (CFC)</option>
+                      <option value="Privé">Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)</option>
+                      <option value="Privé">Centres de recherche</option>
+                      <option value="Privé">Centre WASCAL</option>
+                      <option value="Privé">Ecole des Assistants Médicaux (EAM)</option>
+                      <option value="Privé">Ecole Nationale Supérieure d'Ingénieurs (ENSI)</option>
+                      <option value="Privé">Ecole Supérieure de Secrétariat de Direction (ESSD)</option>
+                      <option value="Privé">Ecole Supérieure des Techniques Biologiques et Alimentaires (E.S.T.B.A)</option>
+                      <option value="Privé">Ecole Supérieure d’Agronomie (ESA)</option>
+                      <option value="Privé">Faculté de Droit (FDD)</option>
+                      <option value="Privé">Faculté des Lettres, Langues et Arts (FLLA)</option>
+                      <option value="Privé">Faculté des Sciences de l'Homme et de la Société (FSHS) des Sciences Economiques et de Gestion (FASEG)</option>
+                      <option value="Privé">Faculté des Sciences de la Santé (FSS)</option>
+                      <option value="Privé">Faculté des Sciences (FDS)</option>
+                      <option value="Privé">Institut Confucius</option>
+                      <option value="Privé">Institut National des Sciences de l'Education (INSE)</option>
+                      <option value="Privé">Institut Universitaire de Technologie de Gestion (IUT de Gestion)</option>
+                      <option value="Privé">Institut des Sciences de l’Information, de la Communication et des Arts (ISICA)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Titre</label>
+                    <input id="title" type="text" class="form-control " name="info_title" value="" required=""  autofocus="" placeholder="Titre de l'information">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Mots clés</label>
+                    <input id="tags" type="text" class="form-control " name="tags" value="" required=""  autofocus="" placeholder="saisissez des mots clés">
+                  </div>
+                </div>
+              </div>
+              <div style="float:right;" class="col-lg-8">
+                <h5>Information</h5><br>
+                <textarea style="height:80vh;" id="myEditor" name="info_content" cols="40" rows="10">
+                  Bienvenue !
+                </textarea>
+                <div style="float:right;" class="form-group d-flex mg-t-15 mg-b-0">
+                  <button type="submit" class="btn btn-brand-01 btn-uppercase flex-fill"><i data-feather="save"></i> ENREGISTRER</button>
+                </div>
               </div>
             </form>
             <!--@modif-->

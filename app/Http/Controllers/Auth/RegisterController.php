@@ -65,7 +65,9 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $userDataDefaultRole = 'student';
         return User::create([
+            'role' => $userDataDefaultRole,
             'university' => $data['university'],
             'name' => $data['name'],
             'email' => $data['email'],
