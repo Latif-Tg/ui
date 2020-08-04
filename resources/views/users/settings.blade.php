@@ -155,15 +155,6 @@
                 </a>
               </li>
               <li class="list-group-item list-group-item-action">
-                <a href="#paneAccount" data-toggle="tab" class="media">
-                  <i data-feather="settings"></i>
-                  <div class="media-body">
-                    <h6>Paramètres du compte</h6>
-                    <span>Gérez les paramètres d'options de votre compte</span>
-                  </div>
-                </a>
-              </li>
-              <li class="list-group-item list-group-item-action">
                 <a href="#paneSecurity" data-toggle="tab" class="media">
                   <i data-feather="shield"></i>
                   <div class="media-body">
@@ -181,15 +172,6 @@
                   </div>
                 </a>
               </li>
-              <li class="list-group-item list-group-item-action">
-                <a href="#paneBilling" data-toggle="tab" class="media">
-                  <i data-feather="credit-card"></i>
-                  <div class="media-body">
-                    <h6>Billing</h6>
-                    <span>Your billing and payment information</span>
-                  </div>
-                </a>
-              </li>
             </ul>
           </div><!-- col -->
           <div class="col-md-8">
@@ -201,49 +183,24 @@
                   <div class="form-settings">
                     <div class="form-group">
                       <label class="form-label">Nom complet</label>
-                      <input type="text" class="form-control" placeholder="Enter your fullname" value="Abigail Johnson">
-                      <div class="tx-11 tx-sans tx-color-04 mg-t-5">Votre nom peut apparaître ici où vous êtes mentionné. Vous pouvez le modifier ou le supprimer à tout moment.</div>
-                    </div><!-- form-group -->
-
-                    <div class="form-group">
-                      <label class="form-label">Votre Bio</label>
-                      <textarea class="form-control" rows="3" placeholder="Write something about you">Un développeur front-end qui se concentre davantage sur la conception de l'interface utilisateur, une assistante d'interface Web, une connectrice géniale et une jumelle perdu depuis longtemps de Vin Diesel.</textarea>
+                      <input type="text" class="form-control" placeholder="Enter your fullname" value="{{Auth::user()->name}}">
+                      <div class="tx-11 tx-sans tx-color-04 mg-t-5">Votre nom peut apparaître ici où vous êtes mentionné. Vous pouvez le modifier à tout moment.</div>
                     </div><!-- form-group -->
 
                     <div class="form-group">
                       <label class="form-label">Adresse</label>
-                      <input type="text" class="form-control" placeholder="Enter your location" value="Togo, Lomé (Adidogomé)">
+                      <input type="text" class="form-control" placeholder="Votre adresse" value="">
                     </div><!-- form-group -->
 
                     <div class="form-group tx-13 tx-color-04">
-                    Tous les champs de cette page sont facultatifs et peuvent être supprimés à tout moment, et en les remplissant, vous nous autorisez à partager ces données partout où apparaît votre profil d'utilisateur.
+                    En remplissant tous les champs de cette page, vous nous autorisez à partager ces données partout où apparaît votre profil d'utilisateur.
                     </div>
-
+                    
                     <hr class="op-0">
 
                     <button class="btn btn-brand-02">Mettre à jour</button>
                     <button class="btn btn-white mg-l-2">Annuler les changements</button>
                   </div>
-                </div><!-- tab-pane -->
-                <div id="paneAccount" class="tab-pane">
-                  <h6 class="tx-uppercase tx-semibold tx-color-01 mg-b-0">Paramètres du compte</h6>
-
-                  <hr>
-                  <div class="form-settings">
-                    <div class="form-group">
-                      <label class="form-label">Nom d'utilisateur</label>
-                      <input type="text" class="form-control" placeholder="nom d'utilisateur" value="abigail.Johnson">
-                      <div class="tx-11 tx-sans tx-color-04 mg-t-5">Après avoir changé votre nom d'utilisateur, votre ancien nom d'utilisateur devient disponible pour toute autre personne.</div>
-                    </div><!-- form-group -->
-
-                    <hr>
-
-                    <div class="form-group">
-                      <label class="form-label text-danger">Supprimer mon Compte</label>
-                      <p class="tx-sm tx-color-04">Une fois que vous avez supprimé votre compte, vous ne pouvez plus revenir en arrière. Soyez certain.</p>
-                      <button class="btn btn-sm btn-danger">Supprimer mon compte</button>
-                    </div><!-- form-group -->
-                  </div><!-- form-settings -->
                 </div><!-- tab-pane -->
                 <div id="paneSecurity" class="tab-pane">
                   <h6 class="tx-uppercase tx-semibold tx-color-01 mg-b-0">Paramètres de sécurité</h6>
@@ -283,7 +240,7 @@
                   </div><!-- form-settings -->
                 </div><!-- tab-pane -->
                 <div id="paneNotification" class="tab-pane">
-                  <h6 class="tx-uppercase tx-semibold tx-color-01 mg-b-0">Paramètres de notificatiosn</h6>
+                  <h6 class="tx-uppercase tx-semibold tx-color-01 mg-b-0">Paramètres de notifications</h6>
                   <hr>
                   <div class="form-settings mx-wd-100p">
                     <div class="form-group">
@@ -328,24 +285,6 @@
                       </ul>
                     </div><!-- form-group -->
                   </div><!-- form-setting -->
-                </div><!-- tab-pane -->
-                <div id="paneBilling" class="tab-pane">
-                  <h6 class="tx-uppercase tx-semibold tx-color-01 mg-b-0">RÉGLAGES DE FACTURATION</h6>
-                  <hr>
-                  <div class="form-settings mx-wd-100p">
-                    <div class="form-group">
-                      <label class="form-label mg-b-2">Methode de paiements</label>
-                      <p class="tx-color-04 tx-13">Vous n'avez pas ajouté de méthode de paiement</p>
-                      <button class="btn btn-brand-02 btn-sm">Ajouté une méthode de paiement</button>
-                    </div><!-- form-group -->
-
-                    <div class="form-group">
-                      <label class="form-label">Historique de Paiements</label>
-                      <div class="bd bg-gray-100 pd-20 tx-center">
-                        <p class="tx-13 mg-b-0">Vous n'avez effectué aucun paiement.</p>
-                      </div>
-                    </div><!-- form-group -->
-                  </div><!-- form-settings -->
                 </div><!-- tab-pane -->
               </div><!-- tab-content -->
             </div><!-- card -->

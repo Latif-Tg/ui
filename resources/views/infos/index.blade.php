@@ -121,8 +121,8 @@
                       <img src="{{ asset('img/img1.jpg') }}" class="rounded-circle" alt="">
                     </div><!-- avatar -->
                     <div class="media-body mg-l-10">
-                      <h6>Louise Kate Lumaad</h6>
-                      <span>Administrator</span>
+                      <h6>{{Auth::user()->name}}</h6>
+                      <span>{{Auth::user()->role}}</span>
                     </div>
                   </div><!-- media -->
                 </div>

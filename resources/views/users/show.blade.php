@@ -147,21 +147,21 @@
           <div class="profile-sidebar-header">
             <div class="avatar"><img src="{{ asset('img/img9.jpg') }}" class="rounded-circle" alt=""></div>
 
-            <h5>Abigail Johnson</h5>
-            <p>Etudiant en 1ère année (ENSI)</p>
-            <span>Lomé, Zanguéra</span>
+            <h5>{{Auth::user()->name}}</h5>
+            <p>Etudiant de <em>(votre année) </em></p>
             
           </div><!-- profile-sidebar-header -->
             <hr class="mg-b-25">
           <div class="profile-sidebar-body">
             <label class="content-label">Information personnelles</label>
             <ul class="list-unstyled profile-info-list mg-b-0">
-              <li><i data-feather="briefcase"></i> <span class="tx-color-03">ENSI, génie civil</span></li>
-              <li><i data-feather="home"></i> <span class="tx-color-03">Togo, Lomé (Zanguéra)</span></li>
-              <li><i data-feather="smartphone"></i> <a href="#">(+228) 90 23 52 52</a></li>
-              <li><i data-feather="mail"></i> <a href="#">me@johnson.tg</a></li>
+              <li><i data-feather="briefcase"></i> <span class="tx-color-03"><em>Votre faculté</em></span></li>
+              <li><i data-feather="home"></i> <span class="tx-color-03"><em>Votre adresse</em></span></li>
+              <li><i data-feather="smartphone"></i><em>votre numero de Télephone</em></li>
+              <li><i data-feather="mail"></i>{{Auth::user()->email}}</li>
             </ul>
           </div><!-- profile-sidebar-body -->
+          <a href="{{ route('logout') }}" class="btn-xs btn btn-white btn-uppercase flex-fill mg-t-20">{{ __('Mettre a jour') }}</a>
         </div><!-- profile-sidebar -->
         <div class="profile-body">
           <div class="profile-body-header">
@@ -175,10 +175,6 @@
           </div><!-- profile-body-header -->
           <div class="tab-content pd-15 pd-sm-20">
             <div id="overview" class="tab-pane active show">
-              <label class="content-label content-label-lg mg-b-15 tx-color-01">Biographie</label>
-              <p class="tx-color-03">Un développeur front-end qui se concentre davantage sur la conception de l'interface utilisateur, une assistante d'interface Web, une connectrice géniale et une jumelle perdu depuis longtemps de Vin Diesel. </p>
-
-              <hr class="mg-y-15 op-0">
               <div class=" mg-sm-t-20">
                 <div class="card card-hover card-calendar-one">
                   <div class="row no-gutters">
