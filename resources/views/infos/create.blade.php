@@ -31,7 +31,7 @@
         <div class="sidebar-header">
           <div>
             <a href="/" class="sidebar-logo"><span>UNIVINFO</span></a>
-            <small class="sidebar-logo-headline">UNIVERSITE CATHOLIQUE DE L'AFRIQUE DE L'OUEST</small>
+            <small class="sidebar-logo-headline">UNIVERSITE DE LOME</small>
           </div>
         </div><!-- sidebar-header -->
         <div id="dpSidebarBody" class="sidebar-body">
@@ -59,9 +59,7 @@
 
     <div class="content content-page">
         <div class="header">
-          <div class="header-left">
-            <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
-          </div><!-- header-left -->
+          <div class="header-left"></div><!-- header-left -->
   
           <div class="header-right">
             <a href="#" class="header-help-link"><i data-feather="help-circle"></i></a>
@@ -101,13 +99,6 @@
               <div style="float:left;" class="col-lg-4">
               <h5>Derniers reglages</h5>
                 <div class="signin-form">
-                  <div class="form-group">
-                    <label for="info_type">Nature de l'information</label>
-                    <select id="info_type" name="info_type" class="custom-select">
-                      <option value="Public">Public</option>
-                      <option value="Privé">Privé</option>
-                    </select>
-                  </div>
                   <div class="form-group">
                     <label for="university">Destinée aux étudiants de (du)</label>
                     <select id="university" name="receiver_wording" class="custom-select">
