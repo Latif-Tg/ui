@@ -148,11 +148,12 @@
             @foreach($infos as $info)
               
                 <div class="card card-hover card-blog-one">
-                    <div class="card-img-wrapper"><img src=" {{asset(getInfoPicture($info))}}" class="card-img" alt=""></div>
-                    <div class="marker pos-absolute t-10 l-10 bg-primary tx-white">{{$info->receiver_wording}}</div>
+                    <div class="card-img-wrapper">
+                      <a href="{{route('infos.show',[$info->id])}}"><img src=" {{asset(getInfoPicture($info))}}" class="card-img" alt=""></a>
+                    </div>
+                    <div class="marker pos-absolute t-10 l-10 bg-primary tx-white">{{getReceiverWording($info)}}</div>
                     <div class="card-body">
                       <h5 class="card-title"><a href="#">{{$info->title}}</a></h5>
-                      <p class="card-desc">{{$info->info_content}}</p>
                     </div><!-- card-body -->
                     <div class="card-footer">
                       <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye svg-14"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> <span>2,024</span></a>

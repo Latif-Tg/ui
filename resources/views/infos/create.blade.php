@@ -102,6 +102,7 @@
                   <div class="form-group">
                     <label for="university">Destinée aux étudiants de (du)</label>
                     <select id="university" name="receiver_wording" class="custom-select">
+                      <option value=null >University</option>
                       <option value="Centre Informatique et de Calcul (CIC)">Centre Informatique et de Calcul (CIC)</option>
                       <option value="Centre de Formation Continue (CFC)">Centre de Formation Continue (CFC)</option>
                       <option value="Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)">Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)</option>
@@ -130,6 +131,9 @@
                   <div class="form-group">
                     <label for="tags">Mots clés</label>
                     <input id="tags" type="text" class="form-control " name="tags" value="" required=""  autofocus="" placeholder="saisissez des mots clés">
+                  </div>
+                  <div class="form-group">
+                    <input name="cover" type="file"/><br>
                   </div>
                 </div>
               </div>

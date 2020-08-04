@@ -90,7 +90,7 @@ class InfosController extends Controller
      */
     public function show(Info $info)
     {     
-      return view('info.show',compact('info'));
+      return view('infos.show',compact('info'));
     }
     
     /**
