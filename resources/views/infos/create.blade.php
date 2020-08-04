@@ -31,7 +31,7 @@
         <div class="sidebar-header">
           <div>
             <a href="/" class="sidebar-logo"><span>UNIVINFO</span></a>
-            <small class="sidebar-logo-headline">UNIVERSITE CATHOLIQUE DE L'AFRIQUE DE L'OUEST</small>
+            <small class="sidebar-logo-headline">UNIVERSITE DE LOME</small>
           </div>
         </div><!-- sidebar-header -->
         <div id="dpSidebarBody" class="sidebar-body">
@@ -59,9 +59,7 @@
 
     <div class="content content-page">
         <div class="header">
-          <div class="header-left">
-            <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
-          </div><!-- header-left -->
+          <div class="header-left"></div><!-- header-left -->
   
           <div class="header-right">
             <a href="#" class="header-help-link"><i data-feather="help-circle"></i></a>
@@ -102,34 +100,28 @@
               <h5>Derniers reglages</h5>
                 <div class="signin-form">
                   <div class="form-group">
-                    <label for="info_type">Nature de l'information</label>
-                    <select id="info_type" name="info_type" class="custom-select">
-                      <option value="Public">Public</option>
-                      <option value="Privé">Privé</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
                     <label for="info_type">Destinée aux étudiants de (du)</label>
                     <select id="info_type" name="info_type" class="custom-select">
-                      <option value="Public">Centre Informatique et de Calcul (CIC)</option>
-                      <option value="Privé">Centre de Formation Continue (CFC)</option>
-                      <option value="Privé">Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)</option>
-                      <option value="Privé">Centres de recherche</option>
-                      <option value="Privé">Centre WASCAL</option>
-                      <option value="Privé">Ecole des Assistants Médicaux (EAM)</option>
-                      <option value="Privé">Ecole Nationale Supérieure d'Ingénieurs (ENSI)</option>
+                    <option value="UNIV">tout l'université</option>
+                      <option value="CIC">Centre Informatique et de Calcul (CIC)</option>
+                      <option value="CFC">Centre de Formation Continue (CFC)</option>
+                      <option value="CERSA">Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)</option>
+                      <option value="CR">Centres de recherche</option>
+                      <option value="CW">Centre WASCAL</option>
+                      <option value="EAM">Ecole des Assistants Médicaux (EAM)</option>
+                      <option value="ENSI">Ecole Nationale Supérieure d'Ingénieurs (ENSI)</option>
                       <option value="Privé">Ecole Supérieure de Secrétariat de Direction (ESSD)</option>
-                      <option value="Privé">Ecole Supérieure des Techniques Biologiques et Alimentaires (E.S.T.B.A)</option>
-                      <option value="Privé">Ecole Supérieure d’Agronomie (ESA)</option>
-                      <option value="Privé">Faculté de Droit (FDD)</option>
-                      <option value="Privé">Faculté des Lettres, Langues et Arts (FLLA)</option>
-                      <option value="Privé">Faculté des Sciences de l'Homme et de la Société (FSHS) des Sciences Economiques et de Gestion (FASEG)</option>
-                      <option value="Privé">Faculté des Sciences de la Santé (FSS)</option>
-                      <option value="Privé">Faculté des Sciences (FDS)</option>
-                      <option value="Privé">Institut Confucius</option>
-                      <option value="Privé">Institut National des Sciences de l'Education (INSE)</option>
-                      <option value="Privé">Institut Universitaire de Technologie de Gestion (IUT de Gestion)</option>
-                      <option value="Privé">Institut des Sciences de l’Information, de la Communication et des Arts (ISICA)</option>
+                      <option value="ESSD">Ecole Supérieure des Techniques Biologiques et Alimentaires (E.S.T.B.A)</option>
+                      <option value="ESA">Ecole Supérieure d’Agronomie (ESA)</option>
+                      <option value="FDD">Faculté de Droit (FDD)</option>
+                      <option value="FLLA">Faculté des Lettres, Langues et Arts (FLLA)</option>
+                      <option value="FASEG">Faculté des Sciences de l'Homme et de la Société (FSHS) des Sciences Economiques et de Gestion (FASEG)</option>
+                      <option value="FSS">Faculté des Sciences de la Santé (FSS)</option>
+                      <option value="FDS">Faculté des Sciences (FDS)</option>
+                      <option value="IC">Institut Confucius</option>
+                      <option value="INSE">Institut National des Sciences de l'Education (INSE)</option>
+                      <option value="IUT">Institut Universitaire de Technologie de Gestion (IUT de Gestion)</option>
+                      <option value="ISICA">Institut des Sciences de l’Information, de la Communication et des Arts (ISICA)</option>
                     </select>
                   </div>
                   <div class="form-group">
