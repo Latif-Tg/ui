@@ -109,35 +109,35 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="info_type">Destinée aux étudiants de (du)</label>
-                    <select id="info_type" name="info_type" class="custom-select">
-                      <option value="Public">Centre Informatique et de Calcul (CIC)</option>
-                      <option value="Privé">Centre de Formation Continue (CFC)</option>
-                      <option value="Privé">Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)</option>
-                      <option value="Privé">Centres de recherche</option>
-                      <option value="Privé">Centre WASCAL</option>
-                      <option value="Privé">Ecole des Assistants Médicaux (EAM)</option>
-                      <option value="Privé">Ecole Nationale Supérieure d'Ingénieurs (ENSI)</option>
-                      <option value="Privé">Ecole Supérieure de Secrétariat de Direction (ESSD)</option>
-                      <option value="Privé">Ecole Supérieure des Techniques Biologiques et Alimentaires (E.S.T.B.A)</option>
-                      <option value="Privé">Ecole Supérieure d’Agronomie (ESA)</option>
-                      <option value="Privé">Faculté de Droit (FDD)</option>
-                      <option value="Privé">Faculté des Lettres, Langues et Arts (FLLA)</option>
-                      <option value="Privé">Faculté des Sciences de l'Homme et de la Société (FSHS) des Sciences Economiques et de Gestion (FASEG)</option>
-                      <option value="Privé">Faculté des Sciences de la Santé (FSS)</option>
-                      <option value="Privé">Faculté des Sciences (FDS)</option>
-                      <option value="Privé">Institut Confucius</option>
-                      <option value="Privé">Institut National des Sciences de l'Education (INSE)</option>
-                      <option value="Privé">Institut Universitaire de Technologie de Gestion (IUT de Gestion)</option>
-                      <option value="Privé">Institut des Sciences de l’Information, de la Communication et des Arts (ISICA)</option>
+                    <label for="university">Destinée aux étudiants de (du)</label>
+                    <select id="university" name="receiver_wording" class="custom-select">
+                      <option value="Centre Informatique et de Calcul (CIC)">Centre Informatique et de Calcul (CIC)</option>
+                      <option value="Centre de Formation Continue (CFC)">Centre de Formation Continue (CFC)</option>
+                      <option value="Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)">Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)</option>
+                      <option value="Centres de recherche">Centres de recherche</option>
+                      <option value="Centre WASCAL">Centre WASCAL</option>
+                      <option value="Ecole des Assistants Médicaux (EAM)">Ecole des Assistants Médicaux (EAM)</option>
+                      <option value="Ecole Nationale Supérieure d'Ingénieurs (ENSI)">Ecole Nationale Supérieure d'Ingénieurs (ENSI)</option>
+                      <option value="Ecole Supérieure de Secrétariat de Direction (ESSD)">Ecole Supérieure de Secrétariat de Direction (ESSD)</option>
+                      <option value="Ecole Supérieure des Techniques Biologiques et Alimentaires (E.S.T.B.A)">Ecole Supérieure des Techniques Biologiques et Alimentaires (E.S.T.B.A)</option>
+                      <option value="Ecole Supérieure d’Agronomie (ESA)">Ecole Supérieure d’Agronomie (ESA)</option>
+                      <option value="Faculté de Droit (FDD)">Faculté de Droit (FDD)</option>
+                      <option value="Faculté des Lettres, Langues et Arts (FLLA)">Faculté des Lettres, Langues et Arts (FLLA)</option>
+                      <option value="Faculté des Sciences de l'Homme et de la Société (FSHS) des Sciences Economiques et de Gestion (FASEG)">Faculté des Sciences de l'Homme et de la Société (FSHS) des Sciences Economiques et de Gestion (FASEG)</option>
+                      <option value="Faculté des Sciences de la Santé (FSS)">Faculté des Sciences de la Santé (FSS)</option>
+                      <option value="Faculté des Sciences (FDS)">Faculté des Sciences (FDS)</option>
+                      <option value="Institut Confucius">Institut Confucius</option>
+                      <option value="Institut National des Sciences de l'Education (INSE)">Institut National des Sciences de l'Education (INSE)</option>
+                      <option value="Institut Universitaire de Technologie de Gestion (IUT de Gestion)">Institut Universitaire de Technologie de Gestion (IUT de Gestion)</option>
+                      <option value="Institut des Sciences de l’Information, de la Communication et des Arts (ISICA)">Institut des Sciences de l’Information, de la Communication et des Arts (ISICA)</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="email">Titre</label>
-                    <input id="title" type="text" class="form-control " name="info_title" value="" required=""  autofocus="" placeholder="Titre de l'information">
+                    <label for="title">Titre</label>
+                    <input id="title" type="text" class="form-control " name="title" value="" required=""  autofocus="" placeholder="Titre de l'information">
                   </div>
                   <div class="form-group">
-                    <label for="email">Mots clés</label>
+                    <label for="tags">Mots clés</label>
                     <input id="tags" type="text" class="form-control " name="tags" value="" required=""  autofocus="" placeholder="saisissez des mots clés">
                   </div>
                 </div>
