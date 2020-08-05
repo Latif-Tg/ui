@@ -66,7 +66,11 @@
           </div><!-- header-left -->
   
           <div class="header-right">
-          <a href="/infos/info" class="btn btn-xs btn-white btn-uppercase flex-fill mg-l-10">PUBLIER</a>
+          <div class="pd-20">
+        </div>
+        <div class="pd-20">
+          <a href="{{route('infos.create')}}" class="btn btn-light">Nouvelle publication</a>
+        </div>
             <div class="dropdown dropdown-notification">
               <a href="#" class="dropdown-link new" data-toggle="dropdown"><i data-feather="bell"></i></a>
               <div class="dropdown-menu dropdown-menu-right">

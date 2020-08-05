@@ -20,76 +20,118 @@
     <link rel="stylesheet" href="{{ asset('css/vendor/fortawesome/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/vendor/ionicons/css/ionicons.min.css') }}">
 
-
-
     <!-- template css -->
     <link rel="stylesheet" href="{{ asset('css/all.css') }}">
 
+    <!-- Appzi: Capture Insightful Feedback -->
+    <script async src="https://w.appzi.io/w.js?token=FMF2R"></script>
+    <!-- End Appzi -->
+    
   </head>
   <body>
     <div class="sidebar">
         <div class="sidebar-header">
           <div>
-            <a href="/" class="sidebar-logo"><span>UNIVINFO</span></a>
-            <small class="sidebar-logo-headline">UNIVERSITE DE LOME</small>
+            <a href="/infos" class="sidebar-logo"><span>UNIVINFO</span></a>
+            <span title="{{Auth::user()->university}}" style=" width:190px; float:left;" id="univinfoName">
+                <a style="text-transform:uppercase; overflow: hidden; text-overflow: ellipsis;" class="sidebar-logo-headline">{{Auth::user()->university}}</a>
+            </span>
           </div>
         </div><!-- sidebar-header -->
         <div id="dpSidebarBody" class="sidebar-body">
           <ul class="nav nav-sidebar">
-            <li class="nav-label"><label class="content-label">MENU</label></li>
-            <li class="nav-item show">
-                <li class="nav-item"><a href="/infos" class="nav-link"><i data-feather="layers"></i> Publications</a></li>
-                <li class="nav-item"><a href="/calendar" class="nav-link"><i data-feather="calendar"></i> Calendrier</a></li>
-                <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="map-pin"></i> Carte interactive <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
-                <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="users"></i> Associations <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
-                <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="award"></i> Distinctions <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
-                <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="briefcase"></i> Emplois & Stages <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
-                <li title="fonctionnalité en développement" class="nav-item"><a class="nav-link"><i data-feather="gift"></i> Partenaires & services <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
-              </nav>
-            </li>
-          </ul>
-          <hr class="mg-t-30 mg-b-25">
-          <ul class="nav nav-sidebar">
-          <li class="nav-label"><label class="content-label">SUPPORT</label></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i data-feather="aperture"></i> Aide</a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i data-feather="message-square"></i> Feedback</a></li>
-          </ul>
+              <li class="nav-label"><label class="content-label">MENU</label></li>
+              <li class="nav-item show">
+                  <li class="nav-item"><a href="/infos" class="nav-link"><i data-feather="layers"></i> Publications</a></li>
+                  <li class="nav-item"><a href="/calendar" class="nav-link"><i data-feather="calendar"></i> Calendrier</a></li>
+                  <li style="opacity:0.5; cursor:pointer;" title="cette fonctionnalité est en développement" class="nav-item"><a class="nav-link"><i data-feather="map-pin"></i> Carte interactive <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
+                  <li style="opacity:0.5; cursor:pointer;" title="cette fonctionnalité est en développement" class="nav-item"><a class="nav-link"><i data-feather="users"></i> Associations <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
+                  <li style="opacity:0.5; cursor:pointer;" title="cette fonctionnalité est en développement" class="nav-item"><a class="nav-link"><i data-feather="award"></i> Distinctions <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
+                  <li style="opacity:0.5; cursor:pointer;" title="cette fonctionnalité est en développement" class="nav-item"><a class="nav-link"><i data-feather="briefcase"></i> Emplois & Stages <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
+                  <li style="opacity:0.5; cursor:pointer;" title="cette fonctionnalité est en développement" class="nav-item"><a class="nav-link"><i data-feather="gift"></i> Partenaires <span style="margin-left:5px;" class="badge badge-light">dév</span></a></li>
+                </nav>
+              </li>
+            </ul>
+          
         </div><!-- sidebar-body -->
     </div><!-- sidebar -->
 
     <div class="content content-page">
-        <div class="header">
-          <div class="header-left"></div><!-- header-left -->
-  
-          <div class="header-right">
-            <a href="#" class="header-help-link"><i data-feather="help-circle"></i></a>
-            <div class="dropdown dropdown-loggeduser">
+      <div class="header">
+        <div class="header-left">
+          <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
+        </div><!-- header-left -->
+        <div class="header-right">
+          <div class="dropdown dropdown-notification">
+            <a href="#" class="dropdown-link new" data-toggle="dropdown"><i data-feather="bell"></i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-menu-header">
+                <h6>Notifications</h6>
+                <a href="#"><i data-feather="more-vertical"></i></a>
+              </div><!-- dropdown-menu-header -->
+              <div class="dropdown-menu-body">
+                <a href="#" class="dropdown-item">
+                  <div class="avatar"><span class="avatar-initial rounded-circle text-primary bg-primary-light">s</span></div>
+                  <div class="dropdown-item-body">
+                    <p><strong>Socrates Itumay</strong> marked the task as completed.</p>
+                    <span>5 hours ago</span>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="avatar"><span class="avatar-initial rounded-circle tx-pink bg-pink-light">r</span></div>
+                  <div class="dropdown-item-body">
+                    <p><strong>Reynante Labares</strong> marked the task as incomplete.</p>
+                    <span>8 hours ago</span>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="avatar"><span class="avatar-initial rounded-circle tx-success bg-success-light">d</span></div>
+                  <div class="dropdown-item-body">
+                    <p><strong>Dyanne Aceron</strong> responded to your comment on this <strong>post</strong>.</p>
+                    <span>a day ago</span>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="avatar"><span class="avatar-initial rounded-circle tx-indigo bg-indigo-light">k</span></div>
+                  <div class="dropdown-item-body">
+                    <p><strong>Kirby Avendula</strong> marked the task as incomplete.</p>
+                    <span>2 days ago</span>
+                  </div>
+                </a>
+              </div><!-- dropdown-menu-body -->
+              <div class="dropdown-menu-footer">
+                <a href="#">View All Notifications</a>
+              </div>
+            </div><!-- dropdown-menu -->
+          </div>
+          <div class="dropdown dropdown-loggeduser">
               <a href="#" class="dropdown-link" data-toggle="dropdown">
                 <div class="avatar avatar-sm">
-                  <img src="{{ asset('img/img1.jpg') }}" class="rounded-circle" alt="">
+                  <div class="avatar"><span class="avatar-initial rounded-circle">DF</span></div>
                 </div><!-- avatar -->
               </a>
               <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-menu-header">
                   <div class="media align-items-center">
-                    <div class="avatar">
-                      <img src="{{ asset('img/img1.jpg') }}" class="rounded-circle" alt="">
-                    </div><!-- avatar -->
+                  <div class="avatar"><span class="avatar-initial rounded-circle">DF</span></div><!-- avatar -->
                     <div class="media-body mg-l-10">
-                      <h6>Louise Kate Lumaad</h6>
-                      <span>Administrator</span>
+                      <h6>{{Auth::user()->name}}</h6>
+                      <span>{{Auth::user()->role}}</span>
                     </div>
                   </div><!-- media -->
                 </div>
                 <div class="dropdown-menu-body">
-                  <a href="/users/1" class="dropdown-item"><i data-feather="user"></i> Profile</a>
+                  <a href="/users/{{Auth::user()->id}}" class="dropdown-item"><i data-feather="user"></i> Profile</a>
                   <a href="/settings" class="dropdown-item"><i data-feather="briefcase"></i> Paramètres</a>
-                  <a href="/logout" class="dropdown-item"><i data-feather="log-out"></i> Déconnexion</a>
+                  <form action="{{ route('logout') }}" method="post">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <button type="submit" class="dropdown-item"><i data-feather="log-out"></i> Déconnexion</button>
+                </form>
                 </div>
               </div><!-- dropdown-menu -->
             </div>
-          </div><!-- header-right -->
-        </div><!-- header -->
+        </div><!-- header-right -->
+      </div><!-- header -->
         
         <div class="pd-20 content-body">
             <!-- Create the editor container -->
@@ -102,7 +144,7 @@
                   <div class="form-group">
                     <label for="university">Destinée aux étudiants de (du)</label>
                     <select id="university" name="receiver_wording" class="custom-select">
-                      <option value=null >University</option>
+                      <option value="Université de lomé" >tout l'université</option>
                       <option value="Centre Informatique et de Calcul (CIC)">Centre Informatique et de Calcul (CIC)</option>
                       <option value="Centre de Formation Continue (CFC)">Centre de Formation Continue (CFC)</option>
                       <option value="Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)">Centre d’Excellence Régional sur les Sciences Aviaires (CERSA)</option>
@@ -132,18 +174,24 @@
                     <label for="tags">Mots clés</label>
                     <input id="tags" type="text" class="form-control " name="tags" value="" required=""  autofocus="" placeholder="saisissez des mots clés">
                   </div>
-                  <div class="form-group">
-                    <input name="cover" type="file"/><br>
-                  </div>
                 </div>
               </div>
               <div style="float:right;" class="col-lg-8">
-                <h5>Information</h5><br>
-                <textarea style="height:calc(100vh - 160px);" id="myEditor" name="info_content" cols="40" rows="10">
+              <h5>Editeur 
+                <span style="
+                  font-size: 14px;
+                  font-weight: 400;
+                  color: rgba(55, 56, 87, 0.6);
+                  display: inline-block;
+                  margin-left: 5px;" 
+                  class="d-none d-lg-inline">Rediger votre information
+                </span>
+              </h5><br>
+                <textarea style="height:80vh;" id="myEditor" name="info_content" cols="40" rows="10">
                   Bienvenue !
                 </textarea>
                 <div style="float:right;" class="form-group d-flex mg-t-15 mg-b-0">
-                  <button type="submit" class="btn btn-brand-01 btn-uppercase flex-fill"><i data-feather="save"></i> ENREGISTRER</button>
+                  <button type="submit" class="btn btn-brand-01 btn-uppercase flex-fill"><i data-feather="save"></i> ENVOYER</button>
                 </div>
               </div>
             </form>
