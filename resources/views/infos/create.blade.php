@@ -191,7 +191,7 @@
                   Bienvenue !
                 </textarea>
                 <div style="float:right;" class="form-group d-flex mg-t-15 mg-b-0">
-                  <button type="submit" class="btn btn-brand-01 btn-uppercase flex-fill"><i data-feather="save"></i> ENVOYER</button>
+                  <button type="submit" class="btn btn-brand-01 btn-uppercase flex-fill"><i data-feather="save"></i> PUBLIER</button>
                 </div>
               </div>
             </form>

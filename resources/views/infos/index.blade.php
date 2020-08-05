@@ -56,7 +56,7 @@
     </div><!-- sidebar -->
 
     <div class="content content-page">
-    <div class="header">
+      <div class="header">
         <div class="header-left">
           <a href="#" class="burger-menu"><i data-feather="menu"></i></a>
         </div><!-- header-left -->
@@ -142,7 +142,12 @@
                     </div>
                     <div class="marker pos-absolute t-10 l-10 bg-primary tx-white">{{getReceiverWording($info)}}</div>
                     <div class="card-body">
-                      <h5 class="card-title"><a href="#">{{$info->title}}</a></h5>
+                    <span title="{{$info->title}}" style=" width:100%; float:left;">
+                        <h5 style="font-size:20px; overflow: hidden; text-overflow: ellipsis;" class="sidebar-logo-headline">{{$info->title}}</h5>
+                    </span>
+                      <span style="float:left; margin-bottom:20px; height:60px; overflow: hidden; text-overflow: ellipsis;" class="card-desc">
+                        {!! $info->info_content !!}
+                      </span>
                     </div><!-- card-body -->
                     <div class="card-footer">
                       <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye svg-14"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> <span>2,024</span></a>
