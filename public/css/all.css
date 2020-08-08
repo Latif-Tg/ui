@@ -11840,7 +11840,6 @@ body {
         font-weight: 500;
         margin-bottom: 2px; }
       .header-right .dropdown-loggeduser .dropdown-menu-header span {
-        color: #575d78;
         font-size: 0.8125rem; }
     .header-right .dropdown-loggeduser .dropdown-menu-body {
       padding: 0 15px 20px; }
@@ -13193,7 +13192,6 @@ body {
       display: block; } }
 
 .profile-sidebar-header {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;

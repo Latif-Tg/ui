@@ -16,10 +16,11 @@
                 <span class="badge bg-primary tx-white">Important</span><br>
                 <label for="university">{{ __('Choisissez votre université') }}</label>
                 <select id="university" name="university" class="custom-select">
-                  <option value="UCAO">UCAO</option>
-                  <option value="ESGIS">ESGIS</option>
-                  <option value="FORMATEC">FORMATEC</option>
-                  <option value="IAI">IAI</option>
+                  <option title="Université de Lomé" value="Université de Lomé (UL)">UL</option>
+                  <option title="Université Catholique de l'Afrique de l'Ouest (UCAO)" value="Université Catholique de l'Afrique de l'Ouest (UCAO)">UCAO</option>
+                  <option title="Ecole Supérieure de Gestion d'Informatique et des Sciences" value="Ecole Supérieure de Gestion d'Informatique et des Sciences (ESGIS)">ESGIS</option>
+                  <option title="Institut des Sciences Technologiques, Economiques et Administratives" value="Institut des Sciences Technologiques, Economiques et Administratives (FORMATEC)">FORMATEC</option>
+                  <option title="Institut Africain d'informatiques" value="Institut Africain d'informatiques (IAI)">IAI</option>
                 </select>
                 <a id="no_university" href="#"><small>Votre université n'est pas dans la liste ?</small></a>
               </div>

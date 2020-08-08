@@ -16,34 +16,29 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::truncate();
-        DB::table('role_user')->truncate();
 
         $admin = User::create([
-            'university' => 'UCAO',
-            'name' => 'admin',
-            'email' => 'admin@admin.com',
+            'role' => 'administrateur',
+            'university' => 'Université de Lomé (UL)',
+            'name' => 'Dr AKEREBURU',
+            'email' => 'akereburu@admin.com',
             'password' => Hash::make('password')
         ]);
 
         $student = User::create([
-            'university' => 'UCAO',
-            'name' => 'student',
-            'email' => 'student@student.com',
-            'password' => Hash::make('password')
+            'role' => 'étudiant',
+            'university' => 'Université de Lomé (UL)',
+            'name' => 'John Doe',
+            'email' => 'johndoe@gmail.com',
+            'password' =>  Hash::make('password')
         ]);
 
         $corporate = User::create([
-            'name' => 'corporate',
-            'email' => 'corporate@corporate.com',
-            'password' => Hash::make('password')
+            'role' => 'Entreprise',
+            'university' => 'null',
+            'name' => 'TOGOCEL',
+            'email' => 'togocel@corporate.com',
+            'password' =>  Hash::make('password')
         ]);
-
-        $adminRole = Role::where('name', 'admin')->first();
-        $studentRole = Role::where('name', 'student')->first();
-        $corporateRole = Role::where('name', 'corporate')->first();
-
-        $admin->roles()->attach($adminRole);
-        $student->roles()->attach($studentRole);
-        $corporate->roles()->attach($corporateRole);
     }
 }
